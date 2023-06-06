@@ -6,7 +6,6 @@
 | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![kfs logo](https://avatars.githubusercontent.com/u/74511895?s=200&v=4) | If you want to design and deploy a secure Blockchain network based on the latest version of Hyperledger Fabric, feel free to contact dviejo@kungfusoftware.es or visit [https://kfs.es/blockchain](https://kfs.es/blockchain) |
 
-
 ## Getting started
 
 # Tutorial
@@ -326,7 +325,7 @@ To deploy an `Orderer` organization we have to:
 ### Create the certification authority
 
 ```bash
-
+### sadfasdf
 kubectl hlf ca create  --image=$CA_IMAGE --version=$CA_VERSION --storage-class=standard --capacity=1Gi --name=ord-ca \
     --enroll-id=enroll --enroll-pw=enrollpw --hosts=ord-ca.localho.st --istio-port=443
 
@@ -730,6 +729,7 @@ export IMAGE="kfsoftware/asset-transfer-basic-ts:latest"
 ### Build the docker image
 
 If you are using Mac M1, you need to specify platform linux/amd64:
+
 ```bash
 docker build -t $IMAGE --platform=linux/amd64 --file=./asset-transfer-basic/Dockerfile ./asset-transfer-basic
 ```
@@ -740,8 +740,8 @@ Otherwise, just run:
 docker build -t $IMAGE --file=./asset-transfer-basic/Dockerfile ./asset-transfer-basic
 ```
 
-
 ### Push the docker image
+
 Push the docker image to the container registry:
 
 ```bash
@@ -815,11 +815,9 @@ kubectl hlf chaincode query --config=resources/network.yaml \
     --fcn=GetAllAssets
 ```
 
-
 ## Launch the API
 
 For this step, head over the `client` folder and follow the README instructions.
-
 
 ## End of the tutorial
 
@@ -844,4 +842,3 @@ kubectl delete fabricchaincode.hlf.kungfusoftware.es --all-namespaces --all
 kubectl delete fabricmainchannels --all-namespaces --all
 kubectl delete fabricfollowerchannels --all-namespaces --all
 ```
-
